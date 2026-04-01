@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
     duration: 800,
     once: true,
+    offset: 50,
+    easing: 'ease-out-cubic',
     disableMutationObserver: true,
   });
 
@@ -21,52 +23,38 @@ document.addEventListener("DOMContentLoaded", () => {
   const WHATSAPP_NUMBER = "5511976974770";
   const form = document.querySelector("[data-form]");
 
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-      const btn = form.querySelector('button[type="submit"]');
-      const originalText = btn.innerHTML;
-      btn.innerHTML = "<span>Enviando...</span>";
-      btn.disabled = true;
+        const btn = form.querySelector('button[type="submit"]');
+        btn.innerHTML = "<span>Enviando...</span>";
+        btn.disabled = true;
 
-      // Capturar dados ANTES do fetch
-      const nome = form.querySelector('[name="nome"]').value;
-      const email = form.querySelector('[name="email"]').value;
+        // Atualizar o telefone com o formato internacional
+        if (iti && input) {
+          input.value = iti.getNumber();
+        }
 
-      const formData = new FormData(form);
+        const formData = new FormData(form);
+        // Garantir o form-name explicitamente
+        formData.set("form-name", "inscricao");
 
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
-      })
-        .then(function (response) {
-          if (response.ok) {
-            // Montar mensagem do WhatsApp com nome
-            const msg = encodeURIComponent(
-              "Olá, meu nome é " +
-                nome +
-                ". Quero garantir minha vaga na Masterclass de Peptídeos!"
-            );
-            const whatsappURL =
-              "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + msg;
-
-            // Redirecionar para WhatsApp
-            window.location.href = whatsappURL;
-          } else {
-            btn.innerHTML = originalText;
-            btn.disabled = false;
-            alert("Erro ao enviar. Tente novamente.");
-          }
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
         })
-        .catch(function () {
-          btn.innerHTML = originalText;
-          btn.disabled = false;
-          alert("Erro de conexão. Tente novamente.");
-        });
-    });
-  }
+          .then(function () {
+            // Sucesso ou erro do Mock -> Redirecionar para Obrigado
+            window.location.href = "/pagina-obrigado/";
+          })
+          .catch(function () {
+            // Fallback total -> Redirecionar para Obrigado
+            window.location.href = "/pagina-obrigado/";
+          });
+      });
+    }
 
   // Scroll Linking Vanilla JS for Broken Grid with Throttling
   const wrapper = document.querySelector(".broken-grid-wrapper");
