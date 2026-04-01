@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const formData = new FormData(form);
         // Garantir o form-name explicitamente
-        formData.set("form-name", "inscricao");
+        formData.set("form-name", "inscricao_full_v4");
 
         fetch("/", {
           method: "POST",
@@ -52,7 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
              console.log("Erro no fetch, mas redirecionando...", err);
           })
           .finally(function () {
-             // Redirecionamento forçado - o mais importante para a experiência do usuário
+             // Redirecionamento blindado - o mais importante para a experiência do usuário
+             console.log("Forçando redirecionamento final...");
              window.location.assign("/pagina-obrigado/");
           });
       });
