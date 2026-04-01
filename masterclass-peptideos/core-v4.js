@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (form) {
       form.addEventListener("submit", function (e) {
+        console.log("Diagnóstico V4: Submissão iniciada!");
+        alert("Diagnóstico: Iniciando envio V4... Se você ver esta caixa, o código novo está ativo!");
         e.preventDefault();
 
         const btn = form.querySelector('button[type="submit"]');
