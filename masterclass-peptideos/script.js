@@ -46,12 +46,14 @@ document.addEventListener("DOMContentLoaded", () => {
           body: new URLSearchParams(formData).toString(),
         })
           .then(function () {
-            // Sucesso ou erro do Mock -> Redirecionar para Obrigado
-            window.location.href = "/pagina-obrigado/";
+             console.log("Sucesso no envio");
           })
-          .catch(function () {
-            // Fallback total -> Redirecionar para Obrigado
-            window.location.href = "/pagina-obrigado/";
+          .catch(function (err) {
+             console.log("Erro no fetch, mas redirecionando...", err);
+          })
+          .finally(function () {
+             // Redirecionamento forçado - o mais importante para a experiência do usuário
+             window.location.assign("/pagina-obrigado/");
           });
       });
     }
