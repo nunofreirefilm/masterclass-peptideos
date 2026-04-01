@@ -1,100 +1,623 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Masterclass de Peptídeos com Dr. Fernando França</title>
+    <meta
+      name="description"
+      content="Aprenda como otimizar metabolismo, energia e performance com uma abordagem atualizada sobre Peptídeos"
+    />
 
-  <!-- SEO: Atualizar em /gerar-copy -->
-  <title>Titulo da Pagina</title>
-  <meta name="description" content="Descricao para SEO">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Open Graph: Atualizar em /gerar-copy -->
-  <meta property="og:title" content="Titulo da Pagina">
-  <meta property="og:description" content="Descricao para SEO">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="">
-  <meta property="og:url" content="">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="dns-prefetch" href="https://unpkg.com" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
 
-  <!-- Favicon: Adicionar em /desenvolver -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/css/intlTelInput.css"
+    />
 
-  <!-- FONTS: Substituir em /gerar-design (NUNCA usar fontes overused) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="/.netlify/images?url=/images/HERO_1.jpg&w=1200&q=80" imagesrcset="/.netlify/images?url=/images/HERO_1.jpg&w=1200&q=80 1x, /.netlify/images?url=/images/HERO_1.jpg&w=2400&q=80 2x" media="(min-width: 769px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/.netlify/images?url=/images/HERO_2.jpg&w=800&q=80" imagesrcset="/.netlify/images?url=/images/HERO_2.jpg&w=800&q=80 1x, /.netlify/images?url=/images/HERO_2.jpg&w=1600&q=80 2x" media="(max-width: 768px)" fetchpriority="high" />
 
-  <!-- Preconnect CDNs de bibliotecas -->
-  <link rel="preconnect" href="https://unpkg.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="style.css?v=2" />
 
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/js/intlTelInput.min.js"
+      defer
+    ></script>
+    <script src="core-v4.js?v=4" defer></script>
+  </head>
+  <body>
+    <!-- HERO VERDADEIRO 50/50 SPLIT (Tudo na 1ª dobra) -->
+    <header class="hero" id="hero">
+      <div class="hero-split hero-text-col">
+        <div class="hero-content">
+          <div class="badge-live">
+            <span class="pulse-dot"></span>
+            AO VIVO E ONLINE
+          </div>
 
-  <!-- intl-tel-input -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/css/intlTelInput.css">
+          <h1 class="hero-title">
+            <span class="highlight text-gradient">PEPTÍDEOS</span><br />
+            A nova linguagem da medicina moderna.
+          </h1>
 
-  <link rel="stylesheet" href="style.css">
+          <p class="hero-subtitle">
+            O que são. O que realmente fazem no organismo. E por que todo médico precisa entender isso agora — com responsabilidade científica e ética.<br />
+            <strong>Masterclass exclusiva para médicos com Dr. Fernando França.</strong>
+          </p>
 
-  <!-- Scripts: defer no head = browser descobre cedo, executa apos DOM parse -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/js/intlTelInput.min.js" defer></script>
-  <script src="script.js" defer></script>
-</head>
-<body>
+          <div class="hero-notice">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            Importante: Aula não fica gravada. Estritamente ao vivo.
+          </div>
 
-  <!--
-    ESTRUTURA DA PAGINA
-    ===================
-    Gerada por /gerar-layout e construida por /desenvolver
+          <div class="hero-form-compact">
+            <form
+              name="inscricao_full_v4"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              data-form
+            >
+              <input type="hidden" name="form-name" value="inscricao_full_v4" />
+              <p hidden>
+                <label>Não preencha: <input name="bot-field" /></label>
+              </p>
 
-    REGRAS:
-    - Cada secao deve ter arquetipo + constraints unicos
-    - NUNCA repetir padroes entre secoes consecutivas
-    - NUNCA usar: hero centralizado generico, 3 cards, grid simetrico
-    - Manter font pairing consistente em toda pagina
-  -->
+              <div class="form-row">
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  class="form-input"
+                  required
+                  autocomplete="name"
+                  placeholder="Nome"
+                />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  required
+                  autocomplete="email"
+                  placeholder="E-mail"
+                />
+              </div>
 
-  <main>
-    <!-- Conteudo gerado por /desenvolver -->
-  </main>
+              <div class="form-row">
+                <input
+                  type="text"
+                  id="crm"
+                  name="crm"
+                  class="form-input"
+                  required
+                  placeholder="CRM"
+                />
+                <div class="iti-wrapper">
+                  <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    class="form-input"
+                    required
+                    autocomplete="tel"
+                    placeholder="WhatsApp"
+                  />
+                </div>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-glow" style="width: 100%; height: 50px;">
+                <span>GARANTIR VAGA — R$ 97</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
 
-  <!-- FORMULARIO (template) -->
-  <!--
-  <section id="contato" class="section">
-    <div class="container">
-      <h2>Titulo</h2>
+      <!-- Metade 50% para a foto (assim o texto nunca toca na imagem) -->
+      <div class="hero-split hero-media-col">
+        <picture class="hero-bg">
+          <source
+            media="(max-width: 768px)"
+            srcset="/.netlify/images?url=/images/HERO_2.jpg&w=800&q=80 1x, /.netlify/images?url=/images/HERO_2.jpg&w=1600&q=80 2x"
+          />
+          <img
+            src="/.netlify/images?url=/images/HERO_1.jpg&w=1200&q=80"
+            srcset="/.netlify/images?url=/images/HERO_1.jpg&w=1200&q=80 1x, /.netlify/images?url=/images/HERO_1.jpg&w=2400&q=80 2x"
+            alt="Dr. Fernando França"
+            loading="eager"
+            width="1200"
+            height="1200"
+          />
+        </picture>
+      </div>
+    </header>
 
-      <form name="contato" method="POST" action="/obrigado.html" data-netlify="true" netlify-honeypot="bot-field" data-form>
-        <input type="hidden" name="form-name" value="contato">
-        <p hidden><label>Nao preencha: <input name="bot-field"></label></p>
-
-        <div class="form-group">
-          <label class="form-label" for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" class="form-input" required autocomplete="name">
+    <!-- SEÇÃO 1: CONEXÃO COM A DOR (SPLIT ASSIMÉTRICO) -->
+    <section class="section section-pain" id="dor">
+      <div class="container section-pain-container">
+        <div class="pain-media" data-aos="fade-up">
+          <div class="composition-wrapper">
+            <div class="composition-img img-back glass-panel">
+              <img
+                src="/.netlify/images?url=/images/PEP_2.jpg&w=600&q=80"
+                srcset="/.netlify/images?url=/images/PEP_2.jpg&w=600&q=80 1x, /.netlify/images?url=/images/PEP_2.jpg&w=1200&q=80 2x"
+                alt="Laboratório"
+                loading="lazy"
+                width="600"
+                height="800"
+              />
+            </div>
+            <div class="composition-img img-front">
+              <img
+                src="/.netlify/images?url=/images/PEP_1.webp&w=600&q=80"
+                srcset="/.netlify/images?url=/images/PEP_1.webp&w=600&q=80 1x, /.netlify/images?url=/images/PEP_1.webp&w=1200&q=80 2x"
+                alt="Estrutura de Peptídeo"
+                loading="lazy"
+                width="600"
+                height="600"
+              />
+            </div>
+            <div class="floating-badge badge-1">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--color-primary)"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+              Desgaste Constante
+            </div>
+            <div class="floating-badge badge-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--color-primary)"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+              Fadiga Crônica
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="email">E-mail</label>
-          <input type="email" id="email" name="email" class="form-input" required autocomplete="email">
+        <div class="pain-content" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="section-title">
+            Existe muito <span class="highlight text-gradient">ruído</span> hoje na medicina.
+          </h2>
+
+          <ul class="pain-list">
+            <li>
+              <div class="list-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p><strong>Protocolos</strong> sendo replicados cegamente</p>
+            </li>
+            <li>
+              <div class="list-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p><strong>Promessas irresponsáveis</strong> sendo feitas</p>
+            </li>
+            <li>
+              <div class="list-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p>E poucos realmente <strong>entendendo o que está por trás</strong></p>
+            </li>
+          </ul>
+
+          <div class="pain-conclusion glass-panel-light">
+            <p>
+              Peptídeos não são “moda”. São sinais biológicos. E quando mal compreendidos… podem levar o médico ao erro.<br />
+              <strong>Essa aula não é sobre hype. É sobre entendimento.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: O QUE VOCÊ VAI APRENDER (BENTO BOX) -->
+    <section class="section section-learn" id="aprender">
+      <div class="container section-learn-container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <h2 class="section-title">
+            Estratégias modernas voltadas para
+            <span class="highlight text-gradient">performance</span>
+          </h2>
+          <p class="section-subtitle">
+            Nesta masterclass você vai entender de forma clara:
+          </p>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="telefone">WhatsApp</label>
-          <input type="tel" id="telefone" name="telefone" class="form-input" required autocomplete="tel">
+        <div class="bento-grid">
+          <!-- Card 1 Principal -->
+          <article class="bento-card card-main" data-aos="fade-up">
+            <h3 class="bento-card-title" style="font-size: 1.8rem; margin-bottom: 24px;">O que você vai entender</h3>
+            <ul class="pain-list" style="margin-bottom: 0;">
+              <li><div class="list-icon" style="width:24px; height:24px; padding:4px;"><svg viewBox="0 0 24 24" stroke-width="3"><polyline points="20 6 9 17 4 12" stroke="currentColor" fill="none"></polyline></svg></div><p style="color:#fff;">O que são peptídeos (de verdade, além do marketing)</p></li>
+              <li><div class="list-icon" style="width:24px; height:24px; padding:4px;"><svg viewBox="0 0 24 24" stroke-width="3"><polyline points="20 6 9 17 4 12" stroke="currentColor" fill="none"></polyline></svg></div><p style="color:#fff;">Como atuam na sinalização biológica</p></li>
+              <li><div class="list-icon" style="width:24px; height:24px; padding:4px;"><svg viewBox="0 0 24 24" stroke-width="3"><polyline points="20 6 9 17 4 12" stroke="currentColor" fill="none"></polyline></svg></div><p style="color:#fff;">A relação com regeneração, metabolismo e performance</p></li>
+              <li><div class="list-icon" style="width:24px; height:24px; padding:4px;"><svg viewBox="0 0 24 24" stroke-width="3"><polyline points="20 6 9 17 4 12" stroke="currentColor" fill="none"></polyline></svg></div><p style="color:#fff;">O papel deles na nova medicina de longevidade</p></li>
+              <li><div class="list-icon" style="width:24px; height:24px; padding:4px;"><svg viewBox="0 0 24 24" stroke-width="3"><polyline points="20 6 9 17 4 12" stroke="currentColor" fill="none"></polyline></svg></div><p style="color:#fff;">Onde estão sendo utilizados no mundo hoje</p></li>
+              <li><div class="list-icon" style="width:24px; height:24px; padding:4px;"><svg viewBox="0 0 24 24" stroke-width="3"><polyline points="20 6 9 17 4 12" stroke="currentColor" fill="none"></polyline></svg></div><p style="color:#fff;">E os limites éticos e legais no Brasil</p></li>
+            </ul>
+          </article>
+
+          <!-- Card 2 Secundário -->
+          <article class="bento-card card-secondary" data-aos="fade-up" data-aos-delay="200" style="display:flex; justify-content:center; align-items:center; text-align:center; padding: 40px 20px;">
+             <p style="font-size: 1.4rem; font-weight:700; font-family:var(--font-heading); color:var(--color-primary); line-height: 1.4;">"Enquanto muitos estão copiando protocolos... Você vai entender o fundamento."</p>
+          </article>
+
+          <!-- Card 3 Secundário -->
+          <article class="bento-card card-secondary" data-aos="fade-up" data-aos-delay="300" style="display:flex; justify-content:center; align-items:center; text-align:center; padding: 40px 20px;">
+             <p style="font-size: 1.15rem; font-weight:500; font-family:var(--font-heading); line-height: 1.5; color: #fff;">Porque o médico que domina o conceito não depende de tendência.<br/><br/><span class="highlight text-gradient" style="font-size:1.8rem; font-weight:800;">Ele antecipa.</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4: BENEFÍCIOS TRANSFORMADORES (BROKEN GRID) -->
+    <section class="section section-benefits" id="beneficios">
+      <div class="container section-benefits-container">
+        <div class="section-header text-center" data-aos="fade-up" style="margin-bottom: 40px;">
+          <h2 class="section-title">
+            Você terá uma visão clara sobre peptídeos nas áreas de:
+          </h2>
         </div>
 
-        <div class="form-feedback"></div>
-        <button type="submit" class="btn">Enviar</button>
-      </form>
+        <div class="broken-grid-wrapper">
+          <div class="scroll-line-bg"></div>
+          <div class="scroll-line-progress" id="scrollProgress"></div>
+
+          <!-- Step 1 -->
+          <div class="bg-step step-left" data-aos="fade-up">
+            <div class="bg-step-num">01</div>
+            <div class="bg-step-content glass-panel">
+              <p>
+                <strong>Emagrecimento</strong> e metabolismo
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-step step-right" data-aos="fade-up">
+            <div class="bg-step-num">02</div>
+            <div class="bg-step-content glass-panel">
+              <p>
+                <strong>Performance</strong> e composição corporal
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-step step-left" data-aos="fade-up">
+            <div class="bg-step-num">03</div>
+            <div class="bg-step-content glass-panel">
+              <p>
+                <strong>Regeneração</strong> tecidual e pele
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="bg-step step-right" data-aos="fade-up">
+            <div class="bg-step-num">04</div>
+            <div class="bg-step-content glass-panel">
+              <p>
+                <strong>Longevidade</strong> e saúde celular
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center glass-panel-light" data-aos="fade-up" style="max-width: 800px; margin: 40px auto 0; padding: 30px;">
+          <p style="font-size: 1.1rem; color: #ccc;">
+            Incluindo discussões sobre moléculas como: <strong>GHK-Cu</strong>, Peptídeos relacionados a eixo metabólico e Sinalizadores ligados à regeneração.<br /><br />
+            <strong style="color: #fff;">Sempre sob a ótica científica e responsabilidade médica.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVISO DE POSICIONAMENTO -->
+    <div class="scarcity-bar" data-aos="fade-up" style="background: rgba(255,80,80,0.05); border-top: 1px solid rgba(255,80,80,0.1); border-bottom: 1px solid rgba(255,80,80,0.1); padding: 40px 0;">
+      <div class="container text-center">
+        <h3 class="scarcity-title" style="color: #ff9999; font-weight: normal; font-size: 1.3rem; line-height: 1.6;">
+          Esta não é uma aula de prescrição. Não é sobre protocolos. É sobre compreensão profunda.<br/><br/>
+          <strong style="color: #ff5555; font-size: 1.8rem;">Porque antes de aplicar… o médico precisa entender.</strong>
+        </h3>
+      </div>
     </div>
-  </section>
-  -->
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Nome. Todos os direitos reservados.</p>
+    <!-- SEÇÃO 5: PARA QUEM É (STICKY SCROLL) -->
+    <section class="section section-target" id="publico">
+      <div class="container section-target-container">
+        <div class="target-sticky-col">
+          <div class="sticky-content">
+            <h2 class="target-title">
+              Essa Masterclass é para médicos que:
+            </h2>
+          </div>
+        </div>
+
+        <div class="target-scroll-col">
+          <div class="target-list">
+            <!-- Card 1 -->
+            <div class="target-card glass-panel" data-aos="fade-up-left">
+              <div class="target-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+              <div class="target-card-content">
+                <h3>Acompanham a Evolução</h3>
+                <p>Sentem que a medicina está mudando rapidamente e não querem ficar para trás.</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="target-card glass-panel" data-aos="fade-up-left">
+              <div class="target-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+              </div>
+              <div class="target-card-content">
+                <h3>Base Científica</h3>
+                <p>Buscam atualização sustentada por literatura médica e não por modismos.</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="target-card glass-panel" data-aos="fade-up-left">
+              <div class="target-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 16v-4" />
+                  <path d="M12 8h.01" />
+                </svg>
+              </div>
+              <div class="target-card-content">
+                <h3>Compreensão Profunda</h3>
+                <p>Querem entender profundamente o mecanismo de ação antes de aplicar qualquer terapia.</p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="target-card glass-panel" data-aos="fade-up-left">
+              <div class="target-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+              </div>
+              <div class="target-card-content">
+                <h3>Autoridade</h3>
+                <p>Valorizam posicionamento ético, autoridade no consultório e segurança prescritiva absoluta.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- PARA QUEM NÃO É -->
+      <div class="container" data-aos="fade-up" style="margin-top: 60px;">
+        <div class="not-for-you-box">
+          <h2 class="not-for-you-title">Para quem NÃO é:</h2>
+          
+          <div class="not-for-you-items">
+            <div class="not-for-you-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff5555" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              Busca protocolo pronto
+            </div>
+            <div class="not-for-you-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff5555" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              Quer atalhos
+            </div>
+            <div class="not-for-you-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff5555" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              Soluções sem base científica
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 6: SOBRE O ESPECIALISTA (OVERLAP DUOTONE) -->
+    <section class="section section-expert" id="especialista">
+      <div class="container section-expert-container">
+        <div class="expert-media" data-aos="fade-right">
+          <picture>
+            <source
+              media="(max-width: 992px)"
+              srcset="/.netlify/images?url=/images/HERO_2.jpg&w=800&q=80 1x, /.netlify/images?url=/images/HERO_2.jpg&w=1600&q=80 2x"
+            />
+            <img
+              src="/.netlify/images?url=/images/HERO_1.jpg&w=800&q=80"
+              srcset="/.netlify/images?url=/images/HERO_1.jpg&w=800&q=80 1x, /.netlify/images?url=/images/HERO_1.jpg&w=1600&q=80 2x"
+              alt="Dr. Fernando França"
+              class="expert-img"
+              loading="lazy"
+              width="800"
+              height="800"
+            />
+          </picture>
+        </div>
+
+        <div
+          class="expert-content glass-panel"
+          data-aos="fade-left"
+          data-aos-delay="100"
+        >
+          <span class="expert-subtitle text-gradient"
+            >Especialidade em Longevidade e Bem-estar</span
+          >
+          <h2 class="expert-title">Dr. Fernando França</h2>
+          <div class="expert-bio">
+            <p>
+              Médico, mentor e referência em estratégias de longevidade, performance e posicionamento médico.
+            </p>
+            <p>
+              À frente do movimento <strong>Longevidade Brasil</strong>, focando em formar uma classe médica mais preparada.
+            </p>
+            <p>
+              Atua formando médicos em todo o país com uma visão moderna, ética e de alto valor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 7: QUEBRA DE PREÇO E OFERTA -->
+    <section class="section section-price" id="investimento">
+      <div class="container section-price-container">
+        <div class="spotlight-box" data-aos="zoom-in">
+          <div class="spotlight-glow"></div>
+          <div class="spotlight-content glass-panel" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+            <h2 class="price-title" style="margin-bottom: 30px;">
+              Acesso à Masterclass Completa
+            </h2>
+            <div style="text-align: left; margin-bottom: 30px; font-size: 1.1rem; color: var(--color-text-main); line-height: 1.6;">
+              <p>O que você vai receber:</p>
+              <ul style="list-style: none; padding: 0; margin-top: 15px;">
+                <li style="margin-bottom: 10px; display:flex; align-items:center; gap: 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)"><polyline points="20 6 9 17 4 12"/></svg> Aula profundamente estruturada</li>
+                <li style="margin-bottom: 10px; display:flex; align-items:center; gap: 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)"><polyline points="20 6 9 17 4 12"/></svg> Conteúdo direto e aplicável no raciocínio clínico</li>
+                <li style="margin-bottom: 10px; display:flex; align-items:center; gap: 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)"><polyline points="20 6 9 17 4 12"/></svg> Visão atualizada da medicina mundial</li>
+              </ul>
+            </div>
+            
+            <p style="text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; color: #888;">Valor do investimento</p>
+            <div class="price-value text-gradient" style="margin-top: 5px;">R$ 97</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 8: ESCASSEZ & FAQ & FECHAMENTO -->
+
+    <div class="scarcity-bar" data-aos="fade-up">
+      <div class="container text-center">
+        <h3 class="scarcity-title">
+          Vagas limitadas para manter o nível de entrega e qualidade da aula ao
+          vivo.
+        </h3>
+      </div>
     </div>
-  </footer>
 
-</body>
+    <section class="section section-faq-closing" id="faq">
+      <div class="container section-faq-container">
+        <!-- FAQ -->
+        <div class="faq-container">
+          <h2 class="section-title text-center">Dúvidas Frequentes</h2>
+
+          <div class="faq-list">
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+              <button class="faq-question">
+                A masterclass é ao vivo?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer">
+                  <p>
+                    Sim, será transmitida ao vivo e não ficará gravada em nenhum
+                    formato.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+              <button class="faq-question">
+                Qual o valor e forma de pagamento?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer">
+                  <p>
+                    O investimento é de R$ 97,00 em um pagamento único e sem
+                    recorrência.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+              <button class="faq-question">
+                A masterclass é aberta a outros profissionais ou estudantes?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer">
+                  <p>
+                    Não. Esta aula é exclusiva para médicos que possuem CRM ativo, focada estritamente na prática clínica e prescrição avançada.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fechamento Final -->
+        <div
+          class="closing-container text-center"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <h2 class="closing-title">Você pode ignorar isso… <br/><span class="text-gradient">Ou pode entender antes de todo mundo.</span></h2>
+          <a href="#" class="btn btn-primary btn-glow btn-lg" onclick="document.querySelector('#nome').focus(); return false;">
+            <span>Garantir minha vaga</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- RODAPÉ -->
+    <footer style="padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; color: #666; font-size: 0.9rem; line-height: 1.6;">
+      <div class="container">
+        <p style="color: #888; margin-bottom: 10px;"><strong>Dr. Fernando França – CRM MA 5607 | Responsável Técnico</strong></p>
+        <p>Este conteúdo tem caráter exclusivamente informativo,<br> não configura consulta médica nem substitui avaliação individualizada.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">Em conformidade com a Resolução CFM nº 2.336/2023 – Manual de Publicidade Médica.</p>
+      </div>
+    </footer>
+  </body>
 </html>

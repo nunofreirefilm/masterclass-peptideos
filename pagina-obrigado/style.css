@@ -1,0 +1,151 @@
+/* === VARIABLES & RESET (Synchronized with main site) === */
+:root {
+  --color-bg: #07090f;
+  --color-surface: #10141f;
+  --color-primary: #00f2fe;
+  --color-secondary: #4facfe;
+  --color-text-main: #f3f4f6;
+  --color-text-muted: #9ca3af;
+  --color-glass-bg: rgba(16, 20, 31, 0.45);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+  --font-heading: "Sora", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --gradient-neon: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.thank-you-container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--color-glass-border);
+  border-radius: 24px;
+  padding: 60px 40px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.thank-you-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--color-primary) 0%, transparent 60%);
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.icon-success {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 242, 254, 0.1);
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 32px;
+  color: var(--color-primary);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  background: var(--gradient-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  margin-bottom: 40px;
+}
+
+.redirect-status {
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--gradient-neon);
+  color: #07090f;
+  padding: 16px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+}
+
+.whatsapp-btn.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 242, 254, 0.3);
+}
+
+@media (max-width: 480px) {
+  .thank-you-container {
+    padding: 40px 24px;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+}
